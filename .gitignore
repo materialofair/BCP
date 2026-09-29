@@ -3,9 +3,15 @@
 **/.pytest_cache/
 *.pyc
 .env
+.env.*
+!.env.example
 data/
 frontend/node_modules/
 frontend/coverage/
 *.log
 .DS_Store
 .omx/
+*.pem
+*.key
+*.p12
+*.pfx

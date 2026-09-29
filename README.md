@@ -92,3 +92,5 @@ cd frontend && npm run dev
 验证：`cd frontend && npm run lint && npm run typecheck && npm run test && npm run build`；后端运行 `.venv/bin/python -m pytest backend/tests collector/tests`。macOS 可在本机实测；Windows、Intel Mac 与 Linux 的原生启动和离线依赖仍需在对应环境执行后才能视为通过。
 
 地图数据来自 [Natural Earth 1:110m 行政区 GeoJSON](https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson)，其[使用条款](https://www.naturalearthdata.com/about/)说明数据为公共领域。实际边界展示请按企业使用要求核对。
+
+预构建前端所含依赖的许可证和 Apache ECharts 的 NOTICE 见 `frontend/licenses/`。
