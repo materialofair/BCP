@@ -93,4 +93,6 @@ cd frontend && npm run dev
 
 地图数据来自 [Natural Earth 1:110m 行政区 GeoJSON](https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_110m_admin_0_countries.geojson)，其[使用条款](https://www.naturalearthdata.com/about/)说明数据为公共领域。实际边界展示请按企业使用要求核对。
 
-预构建前端所含依赖的许可证和 Apache ECharts 的 NOTICE 见 `frontend/licenses/`。
+## 许可证
+
+本项目原创代码和文档采用 [MIT License](LICENSE)，版权署名为 materialofair。预构建前端中的第三方依赖仍按各自许可证使用，许可证文本和 Apache ECharts 的 NOTICE 见 [frontend/licenses/](frontend/licenses/README.md)；Natural Earth 地图数据为公共领域。
