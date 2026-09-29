@@ -1,0 +1,15 @@
+[Unit]
+Description=BCP supplier risk API
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__BCP_USER__
+WorkingDirectory=__BCP_DIR__
+ExecStart=__BCP_DIR__/.venv/bin/python -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8000
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

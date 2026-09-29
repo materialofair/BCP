@@ -1,0 +1,11 @@
+.venv/
+**/__pycache__/
+**/.pytest_cache/
+*.pyc
+.env
+data/
+frontend/node_modules/
+frontend/coverage/
+*.log
+.DS_Store
+.omx/

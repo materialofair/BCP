@@ -1,0 +1,15 @@
+[Unit]
+Description=BCP supplier risk collector
+After=network-online.target postgresql.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__BCP_USER__
+WorkingDirectory=__BCP_DIR__
+ExecStart=__BCP_DIR__/.venv/bin/python -m collector.worker
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

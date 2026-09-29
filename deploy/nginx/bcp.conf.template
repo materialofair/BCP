@@ -1,0 +1,17 @@
+# Replace the server name and certificate paths, then enable this site in Nginx.
+server {
+    listen 443 ssl;
+    server_name __INTRANET_HOSTNAME__;
+    ssl_certificate __TLS_CERTIFICATE_PATH__;
+    ssl_certificate_key __TLS_PRIVATE_KEY_PATH__;
+
+    client_max_body_size 3m;
+    location / {
+        proxy_pass http://127.0.0.1:8000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_read_timeout 60s;
+    }
+}
